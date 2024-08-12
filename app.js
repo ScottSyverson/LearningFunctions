@@ -41,6 +41,8 @@ function makeSandwich(bread, meat, sauce, veggie) {
 let thisParticularSandwich = makeSandwich("wheat", "salami", "mayo", "olives");
 */
 
+
+console.log("Grade Calculator");
 //! Grade Calculator
 //? Create a program that calculates the average grade from an array of grades and determines the corresponding letter grade.
 
@@ -80,7 +82,8 @@ function letterGrade(num) {
     };
 
 };
-
+console.log("************************************************************");
+console.log("Bank Account Manager")
 //! Bank Account Manager
 //? Create a program that allows a user to manage a simple bank account, including depositing, withdrawing, and checking the balance.
 //TODO Define Variables: Start with a balance variable.
@@ -125,7 +128,8 @@ function withdrawFunc(amt) {
 function balanceCheck() {
     return formatter.format(balance);
 };
-
+console.log("************************************************************");
+console.log("Simple To-Do List")
 //! Simple To-Do List
 //? Create a program that allows the user to add and display tasks in a to-do list.
 
@@ -144,6 +148,7 @@ addTask("task4");
 
 console.log(taskArray);
 
+removeTask(taskArray[1]);
 removeTask("task1");
 
 console.log(taskArray);
@@ -162,6 +167,8 @@ function removeTask(item) {
 
 };
 
+console.log("************************************************************");
+console.log("Temperature Converter")
 //! Temperature Converter
 //? Create a program that converts temperatures between Celsius, Fahrenheit, and Kelvin.
 
