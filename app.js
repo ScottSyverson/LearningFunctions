@@ -230,3 +230,92 @@ function toKelvin(temp, type) {
     }
 
 };
+
+console.log("************************************************************");
+console.log("Music Playlist Manager")
+
+
+//! Music Playlist Manager
+//? Create a program that allows the user to manage a playlist of songs.
+
+//TODO Define an Array: Define an array to store the song titles.
+//TODO Create Functions: Create functions to add a song, remove a song, and display the playlist.
+//TODO Use if-else Statements and Loops: Use if-else statements and loops within the functions to handle the operations.
+//* Output Results: Use console.log to display the playlist after each operation.
+
+let playlistArray = [];
+
+addSong("You Get It All");
+displayPlaylist();
+addSong("How Lucky");
+displayPlaylist();
+addSong("Lost at Birth");
+displayPlaylist();
+addSong("Whitehouse Road");
+displayPlaylist();
+removeSong("How Lucky");
+displayPlaylist();
+
+function addSong(song) {
+    playlistArray.push(song);
+    return playlistArray;
+};
+
+function displayPlaylist() {
+    console.log(playlistArray)
+};
+
+function removeSong(song) {
+    let index = playlistArray.indexOf(song);
+    if (index > -1) {
+        playlistArray.splice(index, 1);
+    }
+    return playlistArray;
+};
+
+console.log("************************************************************");
+console.log("Daily Temperatures")
+//! Daily Temperatures
+//? Create a program that processes daily temperature readings, calculates the average temperature, and identifies the highest and lowest temperatures.
+
+//TODO Predefine an Array of Temperatures: Start with an array of numbers representing daily temperatures.
+let temperatures = [72, 75, 79, 83, 78, 85, 90];
+//TODO Calculate the Average Temperature: Write a function to calculate the average of the temperatures.
+//TODO Find the Highest Temperature: Write a function to find the highest temperature in the array.
+//TODO Find the Lowest Temperature: Write a function to find the lowest temperature in the array.
+
+console.log(tempAverage(temperatures));
+console.log(highTemp(temperatures));
+console.log(lowTemp(temperatures));
+
+function tempAverage(input) {
+    let tempTotal = 0;
+    for (i = 0; i < input.length; i++) {
+        tempTotal = tempTotal + input[i];
+    }
+    let averageTemp = tempTotal / input.length;
+    return averageTemp;
+};
+
+function highTemp(input) {
+    let topTemp = input[0];
+    for (i = 0; i < input.length; i++) {
+        if (input[i] > topTemp) {
+            topTemp = input[i];
+        }
+    }
+    return topTemp;
+};
+
+function lowTemp(input) {
+    let lowTemp = input[0];
+    for (i = 0; i < input.length; i++) {
+        if (input[i] < lowTemp) {
+            lowTemp = input[i];
+        }
+    }
+    return lowTemp;
+};
+
+
+
