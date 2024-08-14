@@ -228,7 +228,6 @@ function toKelvin(temp, type) {
     } else {
         console.log("That is not a known unit of measurement");
     }
-
 };
 
 console.log("************************************************************");
